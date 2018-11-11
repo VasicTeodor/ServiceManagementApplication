@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BlackList>
+  <BlackClass>
+    <Port>25</Port>
+    <Protocol>Null</Protocol>
+    <Group>Admin</Group>
+  </BlackClass>
+  <BlackClass>
+    <Port>23564</Port>
+    <Protocol>Null</Protocol>
+    <Group>Admin</Group>
+  </BlackClass>
+  <BlackClass>
+    <Port>-1</Port>
+    <Protocol>smtp</Protocol>
+    <Group>Client</Group>
+  </BlackClass>
+  <BlackClass>
+    <Port>34</Port>
+    <Protocol>Null</Protocol>
+    <Group>Admin</Group>
+  </BlackClass>
+  <BlackClass>
+    <Port>244</Port>
+    <Protocol>Null</Protocol>
+    <Group>Admin</Group>
+  </BlackClass>
+  <BlackClass>
+    <Port>222</Port>
+    <Protocol>Null</Protocol>
+    <Group>Admin</Group>
+  </BlackClass>
+  <BlackClass>
+    <Port>-1</Port>
+    <Protocol>tcp</Protocol>
+    <Group>Admin</Group>
+  </BlackClass>
+</BlackList>

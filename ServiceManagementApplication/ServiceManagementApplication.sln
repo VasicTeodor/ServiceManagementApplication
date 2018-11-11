@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceManagement.Server", "ServiceManagement.Server\ServiceManagement.Server.csproj", "{9A3D021A-CAA8-4B9A-98B4-E7000E17133A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceManagement.Common", "ServiceManagement.Common\ServiceManagement.Common.csproj", "{8A5FD55A-36BB-43E1-B782-0C140EA5F397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceManagement.Client", "ServiceManagement.Client\ServiceManagement.Client.csproj", "{2E39099C-E4A7-4BA8-82D4-6B7D12169250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceManagement.Audit", "ServiceManagement.Audit\ServiceManagement.Audit.csproj", "{E40918C2-B534-4952-ABF5-6CD0692CEC43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceManagement.CertificatesManager", "ServiceManagement.CertificatesManager\ServiceManagement.CertificatesManager.csproj", "{2E1C83E7-2DA1-45FA-8A5E-BDDF8BFE68FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceManagement.Service", "ServiceManagement.Service\ServiceManagement.Service.csproj", "{12D55E0A-293C-45B4-981D-B653707AEED3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A3D021A-CAA8-4B9A-98B4-E7000E17133A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A3D021A-CAA8-4B9A-98B4-E7000E17133A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A3D021A-CAA8-4B9A-98B4-E7000E17133A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A3D021A-CAA8-4B9A-98B4-E7000E17133A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5FD55A-36BB-43E1-B782-0C140EA5F397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5FD55A-36BB-43E1-B782-0C140EA5F397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5FD55A-36BB-43E1-B782-0C140EA5F397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5FD55A-36BB-43E1-B782-0C140EA5F397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E39099C-E4A7-4BA8-82D4-6B7D12169250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E39099C-E4A7-4BA8-82D4-6B7D12169250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E39099C-E4A7-4BA8-82D4-6B7D12169250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E39099C-E4A7-4BA8-82D4-6B7D12169250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E40918C2-B534-4952-ABF5-6CD0692CEC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E40918C2-B534-4952-ABF5-6CD0692CEC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E40918C2-B534-4952-ABF5-6CD0692CEC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E40918C2-B534-4952-ABF5-6CD0692CEC43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1C83E7-2DA1-45FA-8A5E-BDDF8BFE68FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1C83E7-2DA1-45FA-8A5E-BDDF8BFE68FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1C83E7-2DA1-45FA-8A5E-BDDF8BFE68FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1C83E7-2DA1-45FA-8A5E-BDDF8BFE68FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D55E0A-293C-45B4-981D-B653707AEED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D55E0A-293C-45B4-981D-B653707AEED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D55E0A-293C-45B4-981D-B653707AEED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D55E0A-293C-45B4-981D-B653707AEED3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B262957-0A62-47D0-B736-E4A85C068EFF}
+	EndGlobalSection
+EndGlobal
