@@ -117,10 +117,8 @@ namespace ServiceManagement.Server
 
                 if (mp.IsInRole("ExchangeSessionKey"))
                 {
-                    //string sessionId = OperationContext.Current.SessionId;
                     Console.WriteLine("Connect() executed!");
                     Key = RandomString(32);
-                    //Key = "5ome5ecRetK3y123L45Q67u89asadfjiiweoavmpdpbgyjmpsiogujm98reubopgifpujgaebpgokpiogpgpodfkggkpi90485698um9849bobai3jnygv78tbaf874";
                     _checksum = GetCheckSum();
                     return Key;
                 }
@@ -147,7 +145,6 @@ namespace ServiceManagement.Server
                     Array.Copy(Encoding.ASCII.GetBytes(Key), 0, aesKey, 0, 32);
                     alg.Key = aesKey;
                     alg.Mode = CipherMode.CBC;
-                    Console.WriteLine("Decrypt test..");
                     MemoryStream bencr = new MemoryStream(array);
 
                     CryptoStream cr = new CryptoStream(bencr, alg.CreateDecryptor(), CryptoStreamMode.Read);
@@ -158,15 +155,15 @@ namespace ServiceManagement.Server
                     MemoryStream unenc = new MemoryStream(buf);
                     unenc.Position = 0;
 
-                    Console.WriteLine("Deserialize test..");
+                    Console.WriteLine("\nRecived data:");
                     ClientInfo resd = (ClientInfo)form.Deserialize(unenc);
-                    Console.WriteLine("Got: " + resd.port);
-                    Console.WriteLine("Got: " + resd.protocol);
-                    Console.WriteLine("Got: " + resd.machineName);
+                    Console.WriteLine("Port: " + resd.port);
+                    Console.WriteLine("Protocol: " + resd.protocol);
+                    Console.WriteLine("Machine name: " + resd.machineName);
 
                     if (CheckBlackList(resd, mp.Groups))
                     {
-                        return;
+                        throw new SecurityException("Start service failed, requested parameters are in blacklist.");
                     }
                     else
                     {
@@ -175,6 +172,10 @@ namespace ServiceManagement.Server
                         p.StartInfo.Arguments = resd.port + " " + resd.protocol;
                         p.Start();
                     }
+                }
+                else
+                {
+                    throw new SecurityException("Authorization failed, user can't start services.");
                 }
             }
             catch (Exception ex)

@@ -21,9 +21,9 @@
     <Group>Admin</Group>
   </BlackClass>
   <BlackClass>
-    <Port>244</Port>
+    <Port>2445</Port>
     <Protocol>Null</Protocol>
-    <Group>Admin</Group>
+    <Group>Executor</Group>
   </BlackClass>
   <BlackClass>
     <Port>222</Port>

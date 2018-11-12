@@ -157,8 +157,7 @@ namespace ServiceManagement.Client
                         byte[] iVector;
                         var chiped = EncryptData(ser, key, out iVector);
                         proxy.StartService(chiped, (int)ser.Length, iVector);
-
-                        //num = 5;
+                        
                     }
 
                 } while (num != 5);
@@ -167,7 +166,7 @@ namespace ServiceManagement.Client
 
         private static byte[] EncryptData(MemoryStream serialized, string key, out byte[] iv)
         {
-            Console.WriteLine("Setup crypto..");
+            //encrypt serialized data
             Aes alg = Aes.Create();
             alg.GenerateIV();
             iv = alg.IV;
@@ -175,15 +174,12 @@ namespace ServiceManagement.Client
             Array.Copy(Encoding.ASCII.GetBytes(key), 0, aesKey, 0, 32);
             alg.Key = aesKey;
             alg.Mode = CipherMode.CBC;
-            Console.WriteLine("Encrypt test..");
             serialized.Position = 0;
 
             MemoryStream enc = new MemoryStream();
             CryptoStream cw = new CryptoStream(enc, alg.CreateEncryptor(), CryptoStreamMode.Write);
             cw.Write(serialized.ToArray(), 0, (int)serialized.Length);
-            Console.WriteLine("Encrypted: " + enc.Length);
             cw.FlushFinalBlock(); // Also .Close()'s
-            Console.WriteLine("Final Encrypted: " + enc.Length);
 
             enc.Position = 0; // rewind
 

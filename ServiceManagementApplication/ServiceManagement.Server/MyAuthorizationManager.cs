@@ -12,9 +12,6 @@ namespace ServiceManagement.Server
     {
         protected override bool CheckAccessCore(OperationContext operationContext)
         {
-            //WindowsIdentity principal = operationContext.ServiceSecurityContext.WindowsIdentity;
-            //WindowsPrincipal windowsPrincipal = new WindowsPrincipal(principal);
-            //WindowsPrincipal principal = operationContext.ServiceSecurityContext.AuthorizationContext.Properties["Principal"] as WindowsPrincipal;
             IPrincipal principal = operationContext.ServiceSecurityContext.AuthorizationContext.Properties["Principal"] as IPrincipal;
             MyPrincipal myPrincipal = principal as MyPrincipal;
             

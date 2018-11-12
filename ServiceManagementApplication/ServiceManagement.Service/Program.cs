@@ -15,8 +15,8 @@ namespace ServiceManagement.Service
             Console.Title = "Proces for " + args[0] + " port and " + args[1] + " protocol";
             Console.WriteLine("Port: " + args[0]);
             Console.WriteLine("Protocol: " + args[1]);
-           
-            
+
+
             /*
             string port = args[0];
             string protocol = args[1];
@@ -43,6 +43,8 @@ namespace ServiceManagement.Service
 
             host.Close();
             */
+
+            Console.WriteLine("Press <enter> to exit service...");
             Console.ReadLine();
         }
     }
